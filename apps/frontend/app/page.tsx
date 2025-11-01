@@ -1,5 +1,4 @@
 "use client"
-import { DisplayCardsDemo } from "@/components/StackCards";
 import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 import { Hero } from "@/components/ui/hero-with-image-text-and-two-buttons";
 
