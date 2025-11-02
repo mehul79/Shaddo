@@ -1,4 +1,0 @@
-{
-  "buildCommand": "turbo run build --filter=frontend",
-  "outputDirectory": "apps/frontend/.next"
-}
