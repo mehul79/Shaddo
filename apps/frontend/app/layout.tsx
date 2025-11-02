@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/ui/theme-provider"
 import "./globals.css";
 import { NavBar } from "@/components/NavBar";
 import { ModeToggle } from "@/components/ui/theme-toggler";
+import AlertBtn from "@/components/AlertBtn";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,7 +36,8 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="p-4 flex justify-end ">
+            <div className="p-4 justify-end gap-4 flex">
+              <AlertBtn />
               <ModeToggle />
             </div>
             {children}
