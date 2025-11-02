@@ -29,19 +29,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
-        <div className="relative flex flex-col  h-screen text-foreground">
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div className="p-4 justify-end gap-4 flex">
-              <AlertBtn />
-              <ModeToggle />
-            </div>
-            {children}
-            <NavBar />
+<div className="flex flex-col  w-screen  h-screen text-foreground">
+  <ThemeProvider
+    attribute="class"
+    defaultTheme="system"
+    enableSystem
+    disableTransitionOnChange
+  >
+    <div className="absolute top-0 right-0 p-4 gap-4 flex z-100">
+  <AlertBtn />
+  <ModeToggle />
+</div>
+    {children}
+    <NavBar />
           </ThemeProvider>
         </div>
       </body>
