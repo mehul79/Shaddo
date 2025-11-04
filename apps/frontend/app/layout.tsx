@@ -5,6 +5,7 @@ import "./globals.css";
 import { NavBar } from "@/components/NavBar";
 import { ModeToggle } from "@/components/ui/theme-toggler";
 import AlertBtn from "@/components/AlertBtn";
+import { NavBar2 } from "@/components/Navbar2";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,19 +30,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
-<div className="flex flex-col  w-screen  h-screen text-foreground">
-  <ThemeProvider
-    attribute="class"
-    defaultTheme="system"
-    enableSystem
-    disableTransitionOnChange
-  >
-    <div className="absolute top-0 right-0 p-4 gap-4 flex z-100">
-  <AlertBtn />
-  <ModeToggle />
-</div>
-    {children}
-    <NavBar />
+        <div className="flex flex-col  w-screen  h-screen text-foreground">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className="absolute top-0 right-0 p-4 gap-4 flex z-100">
+              <AlertBtn />
+              <ModeToggle />
+            </div>
+            {children}
+            <NavBar />
           </ThemeProvider>
         </div>
       </body>

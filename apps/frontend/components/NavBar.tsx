@@ -9,73 +9,70 @@ import {
   IconHome,
   IconNewSection,
   IconTerminal2,
+  IconShare
+  
 } from "@tabler/icons-react";
 
 export function NavBar() {
+
   const links = [
     {
       title: "Home",
       icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconHome className="h-full w-full scale-120" />
       ),
-      href: "#",
+      href: "/",
     },
 
     {
-      title: "Products",
+      title: "Tasks",
       icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <img src="pencil.svg" alt="Pencil Icon" className="scale-120 h-full w-full" />
       ),
-      href: "#",
+      href: "/todo",
     },
     {
-      title: "Components",
+      title: "Calendar",
       icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <img src="calendar.svg" alt="Calendar Icon" className="scale-120 h-full w-full" />
       ),
-      href: "#",
+      href: "/calendar",
     },
     {
-      title: "Aceternity UI",
+      title: "Habit",
       icon: (
-        <img
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
-        />
+        <img src="flame.svg" alt="Flame Icon" className="scale-120 h-full w-full" />
       ),
-      href: "#",
+      href: "/habit",
     },
     {
-      title: "Changelog",
+      title: "Pomodoro",
       icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <img src="timer.svg" alt="Timer Icon" className="scale-120 h-full w-full" />
       ),
-      href: "#",
-    },
-
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
+      href: "/pomodoro",
     },
     {
-      title: "GitHub",
+      title: "Profile",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <img src="user.svg" alt="User Icon" className="scale-120 h-full w-full" />
       ),
-      href: "#",
+      href: "/profile",
+    },
+    {
+      title: "Share",
+      icon: (
+        <IconShare className="h-full w-full scale-120" />
+      ),
+      href: "/profile",
     },
   ];
   return (
-    <div className="fixed bottom-3 w-full flex justify-center scale-90">
-      <FloatingDock
-      items={links}
-      desktopClassName=""
-      />
+    <div className="fixed bottom-3 flex justify-center w-full scale-80">
+        <FloatingDock
+          items={links}
+          desktopClassName=""
+        />
     </div>
   );
 }
