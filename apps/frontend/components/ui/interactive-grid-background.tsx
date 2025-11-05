@@ -36,7 +36,7 @@ const InteractiveGridBackground: React.FC<InteractiveGridBackgroundProps> = ({
   children,
   showFade = true,
   fadeIntensity = 20,
-  idleRandomCount = 1,
+  idleRandomCount = 0,
   className,
   ...props
 }) => {

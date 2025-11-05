@@ -127,14 +127,14 @@ export function VerificationCard({
         )}
         style={{ ...glowVars }}
       >
-        <div className="absolute h-fit">
+        <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden pointer-events-none">
           <InteractiveGridBackground
             width={320}
             height={208}
             gridSize={30}
             trailLength={2}
             idleSpeed={0.15}
-            idleRandomCount={2}
+            idleRandomCount={1}
             fadeIntensity={40}
             showFade={true}
             className="w-full h-full" />
@@ -151,7 +151,7 @@ export function VerificationCard({
               <Flame className={`h-4 w-4 ${streakColor}`} />
               <p className={`text-2xl font-bold ${streakColor}`}>{streakCount}</p>
             </div>
-            {/* <p className="text-xs font-medium text-muted-foreground uppercase tracking-tight">days</p> */}
+            <p className="text-xs font-medium text-muted-foreground uppercase tracking-tight">days</p>
           </div>
         </div>
 
